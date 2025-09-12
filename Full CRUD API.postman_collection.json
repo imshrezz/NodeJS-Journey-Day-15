@@ -1,0 +1,201 @@
+{
+  "info": {
+    "_postman_id": "22ecd3be-fc7c-4358-9152-9b08b41d05b0",
+    "name": "Full CRUD API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "40688253"
+  },
+  "item": [
+    {
+      "name": "Register",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"email\":\"shreyash@example.com\",\r\n    \"password\":\"pass123\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/users/login",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "users", "login"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GetAll",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GetById",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Profile",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Cache-Control",
+            "value": "no-cache",
+            "name": "cache-control",
+            "type": "text"
+          },
+          {
+            "key": "Postman-Token",
+            "value": "<calculated when request is sent>",
+            "name": "postman-token",
+            "type": "text"
+          },
+          {
+            "key": "Host",
+            "value": "<calculated when request is sent>",
+            "name": "host",
+            "type": "text"
+          },
+          {
+            "key": "User-Agent",
+            "value": "PostmanRuntime/7.39.1",
+            "name": "user-agent",
+            "type": "text"
+          },
+          {
+            "key": "Accept",
+            "value": "*/*",
+            "name": "accept",
+            "type": "text"
+          },
+          {
+            "key": "Accept-Encoding",
+            "value": "gzip, deflate, br",
+            "name": "accept-encoding",
+            "type": "text"
+          },
+          {
+            "key": "Connection",
+            "value": "keep-alive",
+            "name": "connection",
+            "type": "text"
+          },
+          {
+            "key": "Authorization",
+            "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4YjA0YzI4Y2Y5NzZmYTRjODI4ODJjMiIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc1NjM4NDQ0OCwiZXhwIjoxNzU2Mzg4MDQ4fQ.69ktPfkUbYYF8RO3KwkkKAVlQ1VQmohmKpHBklvBAYk",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:5000/api/users/profile",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "users", "profile"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/users/update",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "users", "update"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Generate",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/certificates/generate",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "certificates", "generate"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Upload",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "profilePic",
+              "type": "file",
+              "src": "c:\\Users\\rhino\\Downloads\\screencapture-localhost-5173-2025-08-14-18_55_09.png"
+            },
+            {
+              "key": "email",
+              "value": "shreyash@example.com",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/users/68b04c28cf976fa4c82882c2/upload",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "users", "68b04c28cf976fa4c82882c2", "upload"]
+        }
+      },
+      "response": []
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "name": "express",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node --watch server.js",
+    "dev": "nodemon server.js"
+  },
+  "engines": {
+    "node": "18.x"
+  },
+  "author": "Shreyash",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.1",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.19.0",
+    "mongoose": "^8.18.0",
+    "multer": "^2.0.2",
+    "nodemailer": "^7.0.6",
+    "pdfkit": "^0.17.2"
+  }
+}

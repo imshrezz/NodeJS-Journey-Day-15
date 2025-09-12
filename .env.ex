@@ -1,0 +1,6 @@
+PORT=5000
+MONGO_URI=your_mongodb_uri_here
+JWT_SECRET=your_jwt_secret_here
+JWT_EXPIRES_IN=1h
+EMAIL_USER=your_email@example.com
+EMAIL_PASS=your_app_password

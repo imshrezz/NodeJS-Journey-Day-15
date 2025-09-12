@@ -1,0 +1,64 @@
+[{
+  "_id": {
+    "$oid": "68ac8644899f60fba86bbd97"
+  },
+  "name": "Shreyash",
+  "email": "shreyash@example.com",
+  "password": "$2b$10$lcuh0USU1nIXiNghhZc3Q.2rM53mAkq43c67SeDe4Bl7a27FQ8HDi",
+  "role": "user",
+  "createdAt": {
+    "$date": "2025-08-25T15:50:28.441Z"
+  },
+  "updatedAt": {
+    "$date": "2025-08-25T15:50:28.441Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68ac900f899f60fba86bbdc6"
+  },
+  "name": "Joteer",
+  "email": "joteer@example.com",
+  "password": "$2b$10$rojmX04zmcGAwb4FBpAjNeG.94.A9i3Jdtg5uIsTAFj7Wbd9F5KPW",
+  "role": "user",
+  "createdAt": {
+    "$date": "2025-08-25T16:32:15.629Z"
+  },
+  "updatedAt": {
+    "$date": "2025-08-25T16:32:15.629Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68ac90ad899f60fba86bbdcc"
+  },
+  "name": "Jotir",
+  "email": "jotir@gmail.com",
+  "password": "$2b$10$4PZ.5dxnlykTksppEGw/Luozfxudyeaqc7PCy1pSnXjkrfTuuwZoS",
+  "role": "user",
+  "createdAt": {
+    "$date": "2025-08-25T16:34:53.398Z"
+  },
+  "updatedAt": {
+    "$date": "2025-08-25T16:34:53.398Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68adb355c9315ddb48097d8a"
+  },
+  "name": "Shreyash Khode",
+  "email": "shreyash@gmail.com",
+  "password": "$2b$10$ntQqIodUbL6Di7XPaUEQhO1FIpjk8Qv77WPhkFDIzI6FGqk6VINhW",
+  "role": "user",
+  "createdAt": {
+    "$date": "2025-08-26T13:15:01.239Z"
+  },
+  "updatedAt": {
+    "$date": "2025-08-26T13:15:01.239Z"
+  },
+  "__v": 0
+}]
