@@ -7,8 +7,8 @@ const nodemailer = require("nodemailer");
 const transporter = nodemailer.createTransport({
   service: "gmail", // you can use any SMTP provider
   auth: {
-    user: "shreyashkhodepatil@gmail.com",
-    pass: "wqptgnhkfykzsycd", // ⚠️ Use App Password, not real password
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASS,
   },
 });
 
@@ -33,6 +33,7 @@ const registerUser = async (req, res) => {
       name,
       email,
       password: hashedPassword,
+      role: "user", // default role
     });
 
     await newUser.save();
@@ -53,7 +54,12 @@ const registerUser = async (req, res) => {
 
     res.status(201).json({
       message: "User registered successfully & Welcome Email sent",
-      user: { id: newUser._id, name: newUser.name, email: newUser.email },
+      user: {
+        id: newUser._id,
+        name: newUser.name,
+        email: newUser.email,
+        role: newUser.role,
+      },
     });
   } catch (err) {
     console.error("Error registering user:", err);
