@@ -11,6 +11,8 @@ const {
   getUserById,
   updateUser,
   deleteUser,
+  forgotPassword,
+  resetPassword
 } = require("../controllers/userController");
 const auth = require("../middleware/auth");
 const role = require("../middleware/role");
@@ -19,6 +21,11 @@ const upload = require("../middleware/upload");
 // public
 router.post("/register", registerUser);
 router.post("/login", loginUser);
+
+//reset password
+router.post("/forgot-password", forgotPassword);
+router.post("/reset-password/:token", resetPassword);
+
 
 //crud operations
 router.get("/", auth, role(["admin"]), getAllUsers);

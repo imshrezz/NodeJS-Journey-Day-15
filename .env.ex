@@ -4,3 +4,7 @@ JWT_SECRET=your_jwt_secret_here
 JWT_EXPIRES_IN=1h
 EMAIL_USER=your_email@example.com
 EMAIL_PASS=your_app_password
+ADMIN_NAME=
+ADMIN_EMAIL=
+ADMIN_PASS=
+CLIENT_URL=http://localhost:5173
