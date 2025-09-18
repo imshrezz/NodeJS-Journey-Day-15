@@ -12,7 +12,7 @@ const {
   updateUser,
   deleteUser,
   forgotPassword,
-  resetPassword
+  resetPassword,
 } = require("../controllers/userController");
 const auth = require("../middleware/auth");
 const role = require("../middleware/role");
@@ -24,8 +24,7 @@ router.post("/login", loginUser);
 
 //reset password
 router.post("/forgot-password", forgotPassword);
-router.post("/reset-password/:token", resetPassword);
-
+router.put("/reset-password/:token", resetPassword);
 
 //crud operations
 router.get("/", auth, role(["admin"]), getAllUsers);
