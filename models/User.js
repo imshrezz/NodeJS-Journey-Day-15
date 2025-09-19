@@ -13,11 +13,9 @@ const userSchema = new mongoose.Schema(
     },
     password: { type: String, required: true },
     role: { type: String, enum: ["user", "admin"], default: "user" },
-    profilePic: {
-      type: String, // store file path or URL
-      resetToken: { type: String },
-      resetTokenExpiry: { type: Date },
-    },
+    profilePic: { type: String },
+    resetToken: { type: String },
+    resetTokenExpiry: { type: Date },
   },
 
   { timestamps: true }
