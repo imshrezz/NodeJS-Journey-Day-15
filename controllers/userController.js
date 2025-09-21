@@ -93,34 +93,6 @@ const loginUser = async (req, res) => {
     res.status(500).json({ message: "Server error", error: err.message });
   }
 };
-const uploadProfilePic = async (req, res) => {
-  try {
-    if (!req.file) {
-      return res.status(400).json({ message: "No file uploaded" });
-    }
-
-    const { email } = req.body; // pass email in form-data along with file
-    const updatedUser = await User.findOneAndUpdate(
-      { email },
-      { profilePic: req.file.path },
-      { new: true }
-    );
-
-    if (!updatedUser) {
-      return res.status(404).json({ message: "User not found" });
-    }
-
-    res.status(200).json({
-      message: "Profile picture uploaded successfully",
-      user: updatedUser,
-    });
-  } catch (err) {
-    res
-      .status(500)
-      .json({ message: "Error uploading file", error: err.message });
-  }
-};
-
 // Protected profile (simple)
 const getProfile = async (req, res) => {
   try {
@@ -337,7 +309,6 @@ module.exports = {
   getProfile,
   getAdminData,
   createUser,
-  uploadProfilePic,
   getAllUsers,
   getUserById,
   updateUser,

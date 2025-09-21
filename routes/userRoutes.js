@@ -46,7 +46,6 @@ const {
   loginUser,
   getProfile,
   getAdminData,
-  uploadProfilePic,
   getAllUsers,
   getUserById,
   updateUser,
@@ -66,6 +65,15 @@ router.post("/login", loginUser);
 router.post("/forgot-password", forgotPassword);
 router.put("/reset-password/:token", resetPassword);
 
+// Protected User Routes
+router.get("/profile", auth, getProfile);
+router.put(
+  "/update/profile",
+  auth,
+  upload.single("profilePic"),
+  updateUserProfile
+); // New profile update route
+
 // Protected Admin Routes
 router.get("/", auth, role(["admin"]), getAllUsers);
 router.post("/create", auth, role(["admin"]), createUser); // New route for admin to create users
@@ -73,20 +81,5 @@ router.get("/:id", auth, role(["admin"]), getUserById);
 router.put("/update/:id", auth, role(["admin"]), updateUser);
 router.delete("/delete/:id", auth, role(["admin"]), deleteUser);
 router.get("/admin", auth, role(["admin"]), getAdminData);
-
-// Protected User Routes
-router.get("/profile", auth, getProfile);
-router.put(
-  "/update/profile",
-  auth,
-  upload.single("profileImage"),
-  updateUserProfile
-); // New profile update route
-router.post(
-  "/upload/profile-pic",
-  auth,
-  upload.single("profilePic"),
-  uploadProfilePic
-); // Adjusted upload route
 
 module.exports = router;
