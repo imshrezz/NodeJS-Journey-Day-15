@@ -53,6 +53,8 @@ const {
   deleteUser,
   forgotPassword,
   resetPassword,
+  updateUserProfile,
+  createUser,
 } = require("../controllers/userController");
 const auth = require("../middleware/auth");
 const role = require("../middleware/role");
@@ -66,7 +68,7 @@ router.put("/reset-password/:token", resetPassword);
 
 // Protected Admin Routes
 router.get("/", auth, role(["admin"]), getAllUsers);
-router.post("/create", auth, role(["admin"]), registerUser); // New route for admin to create users
+router.post("/create", auth, role(["admin"]), createUser); // New route for admin to create users
 router.get("/:id", auth, role(["admin"]), getUserById);
 router.put("/update/:id", auth, role(["admin"]), updateUser);
 router.delete("/delete/:id", auth, role(["admin"]), deleteUser);
