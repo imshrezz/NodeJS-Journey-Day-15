@@ -152,27 +152,9 @@ const getAdminData = (req, res) => {
 
 // crud
 
-// const getAllUsers = async (req, res) => {
-//   try {
-//     const users = await User.find().select("-password"); // no passwords
-//     res.status(200).json({ users });
-//   } catch (err) {
-//     res
-//       .status(500)
-//       .json({ message: "Error fetching users", error: err.message });
-//   }
-// };
-
 const getAllUsers = async (req, res) => {
   try {
-    const { sortBy, order } = req.query;
-    let sortOptions = {};
-    if (sortBy) {
-      sortOptions[sortBy] = order === "desc" ? -1 : 1;
-    } else {
-      sortOptions.createdAt = -1;
-    }
-    const users = await User.find().select("-password").sort(sortOptions);
+    const users = await User.find().select("-password"); // no passwords
     res.status(200).json({ users });
   } catch (err) {
     res
